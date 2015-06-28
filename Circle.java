@@ -7,12 +7,10 @@ public class Circle {
 				double L = d * Pi; 
 				System.out.println("L = " + L + ".");
 			} else  {
-				System.err.println("Enter non-null argument for d!");
-				return;
+				System.err.println("You enter null argument for d. In that case L = " + L + ".");
 			}
 		} else {
 			System.err.println("Enter argument for d!");
-			return;
 		}
 	}
 }
