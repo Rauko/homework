@@ -9,9 +9,11 @@ public class Rectangle {
 			System.out.println("S = " + S + " and P = " + P + ".");
 			} else  {
 				if(sideA == 0 && sideB == 0) {
-					System.err.println("You enter null argument for both of the rectangle sides. In that case: S = " + S + " and P = " + P + ".");
+					System.err.println("You enter null argument for both of the rectangle sides. \n
+							In that case: S = " + S + " and P = " + P + ".");
 				} else 
-					System.err.println("You enter null argument for one of the rectangle sides. In that case: S = " + S + " and P = " + P + ".");
+					System.err.println("You enter null argument for one of the rectangle sides. \n
+						 	In that case: S = " + S + " and P = " + P + ".");
 			}
 		} else {
 			System.err.println("Enter both arguments for rectangle sides!");
