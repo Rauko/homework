@@ -4,12 +4,14 @@
 
 public class Ex_07 {
 	public static void main (String[] args){
-		Integer TC=0;
-		TC = Integer.parseInt(args[0]);
-		System.out.print("You entered " + TC + "C. It would be ");
-		int TF = 0;
-		TF = TC * 9 / 5 + 32;
-		System.out.println(TF + " in F.");
+		if(args.length >= 1) {
+			if(args.length > 1)
+				System.err.println("You entered more digits, than programm needs. It will use only the first one");
+			Double TC = Double.parseDouble(args[0]);
+			double TF =  (double)TC * 9 / 5 + 32;
+			System.out.println("You entered " + TC + "C. It would be " + TF + " in F.");
+		} else
+			System.err.println("Enter digit argument!");
 	}
 }
 
