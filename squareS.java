@@ -7,7 +7,8 @@ public class squareS{
 			if (side > 0) {
 				System.out.println("Your square sq. is S = " + side + ".");
 			} else  {
-				System.err.println("You entered null to a square side. In that case, S = " + side + ".");
+				System.err.println("You entered null to a square side. \n
+						    In that case, S = " + side + ".");
 			}
 		} else {
 			System.err.println("Enter both arguments for square sides!");
