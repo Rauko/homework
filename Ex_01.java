@@ -6,17 +6,17 @@ public class Ex_01 {
 
 			if (args.length > 2)
 				System.err.println("You enter more digits, than programm needed. \n
-									It will use only first two of them.");
+						    		It will use only first two of them.");
 
 			System.out.println("Your variable A: " + A + "; \n
-								Your variable B: " + B + ". Now let's swap 'em!");
+					    		Your variable B: " + B + ". Now let's swap 'em!");
 
 			int buf = A;
 			A = B;
 			B = buf;
 		
 			System.out.println("Now your variables are: \n
-								A = " + A + ", B = " + B + ".");
+					    		A = " + A + ", B = " + B + ".");
 		} else
 			System.err.println("Enter two digit arguments!");
 	}
