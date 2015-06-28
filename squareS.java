@@ -2,17 +2,15 @@ public class squareS{
 	public static void main(String[] args){
 		if (args.length >= 1){
 			Integer side = Integer.parseInt(args[0]);
+			System.out.println("Your square side is " + side + ".");
+			side = side * side;
 			if (side > 0) {
-				System.out.println("Your square side is " + side + ".");
-				side = side * side;
-				System.out.println("Your square sq. is " + side + ".");
+				System.out.println("Your square sq. is S = " + side + ".");
 			} else  {
-				System.err.println("Enter non-null arguments for both square sides!");
-				return;
+				System.err.println("You entered null to a square side. In that case, S = " + side + ".");
 			}
 		} else {
 			System.err.println("Enter both arguments for square sides!");
-			return;
 		}
 	}
 }
