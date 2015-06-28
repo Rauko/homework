@@ -7,7 +7,8 @@ public class squareP{
 			if (side > 0) {
 				System.out.println("Your square perimeter is P = " + side + ".");
 			} else  {
-				System.err.println("You entered null to a square side. In that case, P = " + side + ".");
+				System.err.println("You entered null to a square side. \n
+						    In that case, P = " + side + ".");
 			}
 		} else {
 			System.err.println("Enter argument for square side!");
