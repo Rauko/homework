@@ -7,7 +7,8 @@ public class Circle {
 			if (d > 0) {
 				System.out.println("L = " + L + ".");
 			} else  {
-				System.err.println("You enter null argument for d. In that case L = " + L + ".");
+				System.err.println("You enter null argument for d. \n
+						In that case L = " + L + ".");
 			}
 		} else {
 			System.err.println("Enter argument for d!");
