@@ -1,14 +1,17 @@
 public class Ex_03 {
 	public static void main(String[] args) {
-		if (args.length >= 3) {
+		if (args.length == 3) {
 			Integer A = Integer.parseInt(args[0]);
-			System.out.println("Your variable A: " + A + ";");
-
 			Integer B = Integer.parseInt(args[1]);
-			System.out.println("Your variable B: " + B + ";");
-
 			Integer C = Integer.parseInt(args[2]);
-			System.out.println("Your variable C: " + C + ". Let's change 'em plases!");
+
+			if (args.length > 3)
+				System.err.println("You enter more digits, than programm needed. \n
+									It will use only first three of them.");
+
+			System.out.println("Your variable A: " + A + "; \n
+								Your variable B: " + B + "; \n
+								Your variable C: " + C + ". Let's change 'em plases!");
 
 			int buf = C;
 			C = A;
