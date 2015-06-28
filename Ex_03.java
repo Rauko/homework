@@ -1,6 +1,6 @@
 public class Ex_03 {
 	public static void main(String[] args) {
-		if(args.length >= 3){
+		if (args.length >= 3) {
 			Integer A = Integer.parseInt(args[0]);
 			System.out.println("Your variable A: " + A + ";");
 
@@ -12,10 +12,10 @@ public class Ex_03 {
 
 			int buf = C;
 			C = A;
-			B = C;
-			A = buf;
+			A = B;
+			B = buf;
 
-			System.out.println("Now your variables are A=" + A + ", B=" + B + ", C=" + C + ".");
+			System.out.println("Now your variables are: A = " + A + ", B = " + B + ", C = " + C + ".");
 		} else 
 			System.err.println("Enter three digit arguments!");
 	}
