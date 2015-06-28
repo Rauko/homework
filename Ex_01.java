@@ -15,7 +15,8 @@ public class Ex_01 {
 			A = B;
 			B = buf;
 		
-			System.out.println("Now your variables are: A = " + A + ", B = " + B + ".");
+			System.out.println("Now your variables are: \n
+								A = " + A + ", B = " + B + ".");
 		} else
 			System.err.println("Enter two digit arguments!");
 	}

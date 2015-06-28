@@ -18,7 +18,8 @@ public class Ex_02 {
 			B = C;
 			C = buf;
 			
-			System.out.println("Now your variables are: A = " + A + ", B = " + B + ", C = " + C + ".");
+			System.out.println("Now your variables are: \n
+								A = " + A + ", B = " + B + ", C = " + C + ".");
 		} else
 			System.err.println("Enter three digit arguments!");
 	}
