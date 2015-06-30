@@ -10,11 +10,9 @@ public class Ex_10 {
 			Integer var = Integer.parseInt(args[0]);
 			if (var == 0){
 				System.err.println("You entered 0. Enter 10-99 and start again.");
-				return;
 			} else {
 				if ((var > 0 && var < 10) || (var > -10 && var < 0)) {
 					System.err.println("You entered 0-9. Enter 10-99 and start again.");
-					return;
 				} else {
 					if ((var > 9 && var < 100) || (var > -100 && var < -9)) {
 						int tens = 1;
@@ -26,7 +24,6 @@ public class Ex_10 {
 						if (var >= 100){
 							System.err.println("You entered 100+. Enter 10-99 and start again.");
 						} else System.err.println("You entered digit less than -100. Enter 10-99 and start again.");
-					return;
 					}
 				}
 			}			
