@@ -18,7 +18,7 @@ public class Ex_10 {
 						int tens = 1;
 					//	int ones = 1;
 						tens = var / 10;
-						var %= 10;  
+						var %= 10;
 						System.out.println("Entered digit consists of " + tens + " tens and " + var + " ones.");
 					} else {
 						if (var >= 100){
@@ -26,7 +26,7 @@ public class Ex_10 {
 						} else System.err.println("You entered digit less than -100. Enter 10-99 and start again.");
 					}
 				}
-			}			
+			}
 		}
 	}
 }
