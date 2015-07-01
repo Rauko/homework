@@ -1,5 +1,5 @@
 /*
-Дано двузначное число. Найти сумму и произведение его цифр.
+Дано трехзначное число. Найти сумму и произведение его цифр.
 */
 
 public class Ex_14 {
@@ -19,6 +19,9 @@ public class Ex_14 {
 					tens = (var - hunds*100) / 10;
 					var %= 10;
 					System.out.println("Entered digit consists of " + hunds + " hundreds, " + tens + " tens and " + var+ " ones.");
+					var = var + tens + hunds;
+					tens = hunds * tens * (var - tens - hunds);
+					System.out.println("Sum of entered digits is " + var + " and multiple " + tens + ".");
 				} else {
 					if (var >= 1000){
 						System.err.println("You entered 1000+. Enter 100-999 and start again.");
