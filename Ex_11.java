@@ -8,8 +8,8 @@ public class Ex_11 {
 			if (args.length > 1)
 				System.err.println("You entered more arguments, than programm needs. \nIt will use only first one.");
 			Integer var = Integer.parseInt(args[0]);
-			int tens = 1;
-			int ones = 1;
+			int tens = var;
+			int ones = var;
 			if (var == 0){
 				System.err.println("You entered 0. Enter 10-99 and start again.");
 			} else {
@@ -17,7 +17,7 @@ public class Ex_11 {
 					System.err.println("You entered 0-9. Enter 10-99 and start again.");
 				} else {
 					if ((var >= 10 && var < 100) || (var > -100 && var <= -10)) {
-						tens = var / 10;
+						tens /= 10;
 						var %= 10;
 						System.out.println("Entered digit consists of " + tens + " tens and " + var+ " ones.");
 						ones = tens + var;
