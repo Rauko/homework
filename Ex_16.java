@@ -41,7 +41,7 @@ public class Ex_16 {
 						}
 					}
 				}
-			} else System.err.println("Your value is out of array!");
-		} else System.err.println("You haven't entered an argument!");
+			} else System.err.println("Your value is out of array! Enter digit from 1 to 365!");
+		} else System.err.println("You haven't entered an argument!"); 
 	}
 }
