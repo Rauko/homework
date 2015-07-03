@@ -10,13 +10,12 @@ public class Ex_15 {
 			Integer sec = Integer.parseInt(args[0]);
 			if (sec < 0) {
 				System.err.println("The entered value can't be negative!");
-				return;
 			} else{
 				int hour = 0;
 				int min = 0;
 				if (sec >= 3600){
 					hour = sec/3600;
-					sec -= hour*3600; 
+					sec -= hour*3600;
 					if (hour >= 24){
 						int day = hour/24;
 						hour-= 24*day;
@@ -24,7 +23,7 @@ public class Ex_15 {
 				}
 				if (sec >= 60){
 					min = sec/60;
-					sec -= min*60; 
+					sec -= min*60;
 				}
 				System.out.println("Since the beginning of the day has passed " + hour + " hours, " + min + " minutes and " + sec + " seconds.");
 			}
