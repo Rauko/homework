@@ -8,25 +8,12 @@ public class Ex_10 {
 			if (args.length > 1)
 				System.err.println("You entered more arguments, than programm needs. \nIt will use only first one.");
 			Integer var = Integer.parseInt(args[0]);
-			if (var == 0){
-				System.err.println("You entered 0. Enter 10-99 and start again.");
-			} else {
-				if ((var > 0 && var < 10) || (var > -10 && var < 0)) {
-					System.err.println("You entered 0-9. Enter 10-99 and start again.");
-				} else {
-					if ((var > 9 && var < 100) || (var > -100 && var < -9)) {
-						int tens = 1;
-					//	int ones = 1;
-						tens = var / 10;
-						var %= 10;
-						System.out.println("Entered digit consists of " + tens + " tens and " + var + " ones.");
-					} else {
-						if (var >= 100){
-							System.err.println("You entered 100+. Enter 10-99 and start again.");
-						} else System.err.println("You entered digit less than -100. Enter 10-99 and start again.");
-					}
-				}
-			}
+			if ((var > 9 && var < 100) || (var > -100 && var < -9)) {
+				int tens = 1;
+				tens = var / 10;
+				var %= 10;
+				System.out.println("Entered digit consists of " + tens + " tens and " + var + " ones.");
+			} else System.err.println("You entered " + var + ". Enter 10-99 or its negative and start again.");
 		} else System.err.println("You haven't entered an arguments!");
 	}
 }
