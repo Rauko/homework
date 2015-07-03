@@ -15,7 +15,7 @@ public class Ex_17 {
 				} else {
 					System.out.println("This three-digit number is even.");
 					System.err.println("Сondition is not satisfied!");
-				} 
+				}
 			} else System.err.println("Entered digit doesn't satisfy condition. \nEnter a value in array from 100 to 999");
 		} else System.err.println("You haven't entered an argument!");
 	}
