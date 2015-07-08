@@ -5,7 +5,7 @@
 public class Ex_26 {
 	public static void main(String[] args){
 		if (args.length < 1) {
-			System.err.println("You haven't entered argument! The task requires entering one arguments.");
+			System.err.println("You haven't entered an argument! The task requires entering one arguments.");
 			return;
 		}
 		if (args.length > 1) System.out.println("You entered more arguments, than programm needs. \nIt will use only first one.");
