@@ -13,16 +13,16 @@ public class Ex_27 {
 		System.out.print (year + " is the Year of ");
 		switch (year%5+1){
 			case 1: 
-				System.out.print("Red ");
+				System.out.print("White ");
 				break;
 			case 2: 
 				System.out.print("Yellow ");
 				break;
 			case 3: 
-				System.out.print("White ");
+				System.out.print("Black ");
 				break;
 			case 4: 
-				System.out.print("Black ");
+				System.out.print("Red ");
 				break;
 			case 5: 
 				System.out.print("Green ");
