@@ -16,7 +16,7 @@ public class Ex_29 {
 			return;
 		}
 		System.out.print("A = " + A + ", B = " + B + ". \nThe sum of all integers from A to B inclusive: ");
-		for(int i = A; i <= B; i++)
+		for(int i = A+1; i <= B; i++)
 			A += i;
 		System.out.println(A);
 	}

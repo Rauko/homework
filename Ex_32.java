@@ -17,12 +17,16 @@ public class Ex_32 {
 		}
 		double line = 1d;
 		int plusMinus = -1;
+		int bufMark = 1;
+		double sum = 1d;
 		System.out.print("A = " + A + ", N = " + N + ". \nLine: " + line + " ");
 		for(int i = 0; i <= N; i++){
 			line *= ((double)A);
-			line *= plusMinus;
+			bufMark *= plusMinus;
+			sum += line*bufMark;		
 			System.out.print(line + " ");
 		}
 		System.out.println();
+		System.out.println(sum);
 	}
 }
