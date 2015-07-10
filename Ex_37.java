@@ -14,8 +14,17 @@ public class Ex_37 {
 			System.err.println("Entered digit doesn't satisfy condition. It must be positive and not zero!");
 			return;
 		}
-		if((N%2 == 0 || N%3 == 0) && N != 2 && N != 3) {
+		boolean isComposite = false;
+		for (int i = 2; i <= Math.round(N/2); i++) {
+			if (N % i == 0) {
+				isComposite = true;
+				break;
+			}
+		}
+		if (isComposite) {
+			System.out.println("False!");
+		} else {
 			System.out.println("True!");
-		} else System.out.println("False!");
+		}
 	}
 }
