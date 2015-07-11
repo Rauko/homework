@@ -1,8 +1,8 @@
 /*
-Дан массив из десяти целых чисел. Найти их произведение.
+Дан массив из десяти целых чисел. Найти их среднее арифметическое.
 */
 
-public class Ex_41 {
+public class Ex_42 {
 	public static void main (String[] args){
 		if (args.length < 10) {
 			System.err.println("You haven't entered arguments! The task requires entering ten arguments.");
@@ -17,12 +17,13 @@ public class Ex_41 {
 
 		System.out.println("Your array is: ");
 		for (int i = 0; i < array.length; i++)
-			System.out.print(array[i] + " ");
-		System.out.println();
+			System.out.print(array[i] + ", ");
+		System.out.println("\b\b.");
 
-		int product = 1;
+		double sum = 1;
 		for (int i = 0; i < array.length; i++)
-			product *= array[i];
-		System.out.println("Product of this array is: " + product);
+			sum += array[i];
+		sum /= array.length;
+		System.out.println("Arithmetical mean of this array is: " + sum + ".");
 	}
 }
