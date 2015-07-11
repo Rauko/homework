@@ -15,7 +15,7 @@ public class Ex_40 {
 		for (int i = 0; i < sizeArr; i++)
 			System.out.print(array[i] + " ");
 		System.out.println();
-		int sum = 1;
+		int sum = 0;
 		for (int i = 0; i < sizeArr; i++)
 			sum += array[i];
 		System.out.println("Sum of this array is: " + sum);
