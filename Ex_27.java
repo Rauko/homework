@@ -15,7 +15,7 @@ public class Ex_27 {
 			case 1: 
 				System.out.print("White ");
 				break;
-			case 2: 
+			case 2:
 				System.out.print("Yellow ");
 				break;
 			case 3: 
