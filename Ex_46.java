@@ -1,7 +1,3 @@
-/*
-Дано целое число N и массив из N целых чисел, упорядоченный по возрастанию. Данный набор может содержать одинаковые элементы. Вывести в том же порядке все различные элементы данного массива.
-*/
-
 import java.util.*;
 
 public class Ex_46 {
@@ -16,6 +12,7 @@ public class Ex_46 {
 	
 		Integer N = Integer.parseInt(args[0]);
 
+/*		//random array generator 
 		int sizeArr = N;
 		int maxVal = 100;
 		int[] array = new int[sizeArr];
@@ -24,7 +21,8 @@ public class Ex_46 {
 			array[i] = new Random().nextInt(maxVal);
 
 		int min_arr = 0;
-
+		
+		//sorter 
 		for(int i = 0; i < array.length - 1; i++){
 			min_arr = i;
 			for (int j = i + 1; j < array.length; j++){
@@ -36,21 +34,29 @@ public class Ex_46 {
 			array[i] = array[min_arr];
 			array[min_arr] = buf;
 		}
+*/
+
+		// manual entering of array
+		int[] array = {1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 8, 9, 10};
+
+		if(N > array.length){
+			System.err.println("Not enoth elements in atandart array!");
+			return;
+		}
 
 		System.out.print("You entered array length: " + N + "\nYour random array is: " + Arrays.toString(array) + "\nAfter adding B this array will change to: [");
 
-		int newLength = 0;
+		int newLength = 1;
 
-		for(int i = 0; i < array.length-1; i++){
-			if (array[i] != array[i+1]){
-				System.out.print(array[i] + ", ");
+		System.out.print(array[0] + ",");
+
+		for(int i = 1; i < N; i++){
+			if (array[i] != array[i-1]){
+				System.out.print(" " + array[i] + ",");
 				newLength++;
 			} else continue;
 		}
-		if(array[array.length-2] != array[array.length-1]) {
-			System.out.print(array[array.length-1] + " ");
-			newLength++;
-		}
+
 		System.out.println("\b]\nNew length of array is " + newLength);
 
 		if (newLength == N) {
