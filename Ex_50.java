@@ -4,7 +4,7 @@
 
 import java.util.*;
 
-public class Ex_49 {
+public class Ex_50 {
 	public static int prodFunc(int[] array){
 		int prodRes = 1;
 		for (int i = 0; i < array.length; i++){
