@@ -1,16 +1,16 @@
 /*
-Дан массив из N целых чисел. Найти их сумму. Расчет суммы массива реализовать в виде функции.
+Дан массив из N целых чисел. Найти их произведение. Расчет произведения массива реализовать в виде функции.
 */
 
 import java.util.*;
 
 public class Ex_49 {
-	public static int sumFunc(int[] array){
-		int sumRes = 0;
+	public static int prodFunc(int[] array){
+		int prodRes = 1;
 		for (int i = 0; i < array.length; i++){
-			sumRes += array[i];
+			prodRes *= array[i];
 		}
-		return sumRes;
+		return prodRes;
 	}
 
 	public static int[] randomArrayCreate(int N){
@@ -38,8 +38,8 @@ public class Ex_49 {
 		int[] array = randomArrayCreate(N);
 		System.out.println(Arrays.toString(array));
 
-		int allArrSum = sumFunc(array);
+		int allArrProd = prodFunc(array);
 
-		System.out.println(allArrSum);
+		System.out.println("Product of all arrays elements is " + allArrProd + ".");
 	}
 }

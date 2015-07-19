@@ -5,10 +5,10 @@
 public class Ex_44 {
 	public static void main (String[] args){
 		if (args.length < 11) {
-			System.err.println("You haven't entered arguments! The task requires entering ten arguments.");
+			System.err.println("You haven't entered arguments! The task requires entering eleven arguments.");
 			return;
 		}
-		if (args.length > 11) System.out.println("You entered more arguments, than programm needs. \nIt will use only first ten.");
+		if (args.length > 11) System.out.println("You entered more arguments, than programm needs. \nIt will use only first eleven.");
 		Integer K = Integer.parseInt(args[0]);
 		int[] array = new int[10];
 
@@ -26,14 +26,18 @@ public class Ex_44 {
 		System.out.println("\b\b.");
 
 		int marker = 0;
-		for (int i = 0; i < array.length; i++) {
+		for (int i = array.length-1; i >= 0; i--) {
 			if (array[i] > K) {
 				marker = i;
+				break;
 			}
 		}
 		if (marker != 0){
 			marker++;
 			System.out.println("Last array member, that is bigger than K have number " + marker + " in array.\n                                             *not it's index!*");
-		} else System.out.println("0 - There is no digits bigger than K.");
+		} else if (array[0] > K){
+			marker++;
+			System.out.println("Last array member, that is bigger than K have number " + marker + " in array.\n                                             *not it's index!*");
+		} else System.out.println(marker + " - There is no digits bigger than K.");
 	}
 }
