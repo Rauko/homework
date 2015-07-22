@@ -3,7 +3,7 @@
 Для реализации использовать функции.
 */
 
-public class Ex_29_funk {
+public class Ex_29_func {
 	public static int subSum(int A, int B){
 		int sum = 0;
 		for(int i = A; i <= B; i++)
