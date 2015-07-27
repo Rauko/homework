@@ -3,6 +3,8 @@
 задано число, вывести на экран первое из совпадающих с ним чисел в упорядоченном по возрастанию массиве
 */
 
+import java.util.*;
+
 public class Extra_1 {
 	public static int S(int[] array, int num, int start, int end){
 		if (start > end) {
@@ -41,7 +43,8 @@ public class Extra_1 {
 
 	public static void main(String[] args){
 		Integer num = Integer.parseInt(args[0]);
-		int[] array = {1,2,3,4,5,6,7,8,9,11,11,11,11,12,12,12,13,14,15,16,17,18,19,20};
+		int[] array = {1,2,3,4,5,6,7,8,9,10,11,11,11,12,12,12,13,14,15,16,17,18,19,20};
+		System.out.println(Arrays.toString(array));
 		search(array,num);
 	}	
 }
