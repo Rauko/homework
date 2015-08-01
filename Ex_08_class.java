@@ -41,12 +41,12 @@ public class Ex_08_class {
 		System.out.println("You drove " + task.km + " km.\nYou spent " + task.ov + " liters of fuel.\nIt cost " + task.oc + " $ per liter"); 
 
 		if(cond(task.km,task.ov,task.oc)) return;
-		task.fuelFor100 = task.ov * 100 / task.km;			
+	
 		if (task.ov != 0 && task.oc == 0) {
-			System.out.println(" Fuel consumption for 100 km is" + task.fuelFor100 + ".");
-			return;
+		 	System.out.println(" Fuel consumption for 100 km is" + task.evaluateGasConsumption(task.ov,task.km) + ".");
+		 	return;
 		}
-		task.fuelCostFor1 = ((double)task.ov / task.km) * task.oc;
-		System.out.println("Fuel consumption for 100 km " + task.fuelFor100 + " liters and the cost of 1 km " + task.fuelCostFor1); 
+
+		System.out.println("Fuel consumption for 100 km " + task.evaluateGasConsumption(task.ov,task.km) + " liters and the cost of 1 km " + task.evaluateGasCost(task.ov,task.km,task.oc) ); 
 	}
 }
