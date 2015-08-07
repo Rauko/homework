@@ -1,11 +1,12 @@
-public class Manager extends Employee {
-	private final int bonus = 22;
-	private final String position = "    Manager    ";
+package lesson_21;
+
+public class CodeMasters extends Employee {
+	private final int bonus = 19;
+	private final String position = "   Programmer  ";
 
 	public int getBonus() {
 		return bonus;
 	}
-	
 	public String getPosition() {
 		return position;
 	}
@@ -33,21 +34,51 @@ public class Manager extends Employee {
 	public void prLine(){
 		String[] info = employeeShortInfoOut();
 		for(int i = 0; i < info.length; i++){
-			if(info[1].charAt(0) == 'O'){
+			if(info[1].charAt(0) == 'A' && info[1].charAt(3) == 'B'){
 				if(i == 0){
 					System.out.print("│ " + info[i] + " │ ");
 				} else if(i == 1) {
-					System.out.print(info[i] + "             │   ");
+					System.out.print(info[i] + "                  │   ");
 				} else if (i == 2) {
 					System.out.print(info[i] + "   │   ");
 				} else if (i == 3) {
 					System.out.print(info[i] + "   │");
 				} else System.out.print(info[i] + "│");
-			} else {
+			} else if (info[1].charAt(0) == 'O' && info[1].charAt(3) == 'S'){
+				if(i == 0){
+					System.out.print("│ " + info[i] + " │ ");
+				} else if(i == 1) {
+					System.out.print(info[i] + "              │   ");
+				} else if (i == 2) {
+					System.out.print(info[i] + "   │   ");
+				} else if (i == 3) {
+					System.out.print(info[i] + "   │");
+				} else System.out.print(info[i] + "│");
+			} else if (info[1].charAt(0) == 'N' && info[1].charAt(3) == 'P'){
+				if(i == 0){
+					System.out.print("│ " + info[i] + " │ ");
+				} else if(i == 1) {
+					System.out.print(info[i] + "            │   ");
+				} else if (i == 2) {
+					System.out.print(info[i] + "   │   ");
+				} else if (i == 3) {
+					System.out.print(info[i] + "   │");
+				} else System.out.print(info[i] + "│");
+			} else if (info[1].charAt(0) == 'A' && info[1].charAt(3) == 'S'){
 				if(i == 0){
 					System.out.print("│ " + info[i] + " │ ");
 				} else if(i == 1) {
 					System.out.print(info[i] + "               │   ");
+				} else if (i == 2) {
+					System.out.print(info[i] + "   │   ");
+				} else if (i == 3) {
+					System.out.print(info[i] + "    │");
+				} else System.out.print(info[i] + "│");
+			} else if (info[1].charAt(0) == 'D' && info[1].charAt(3) == 'V'){
+				if(i == 0){
+					System.out.print("│ " + info[i] + " │ ");
+				} else if(i == 1) {
+					System.out.print(info[i] + "                 │   ");
 				} else if (i == 2) {
 					System.out.print(info[i] + "   │   ");
 				} else if (i == 3) {
@@ -57,4 +88,5 @@ public class Manager extends Employee {
 		}
 		System.out.println();
 	}
+
 }

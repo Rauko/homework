@@ -1,3 +1,5 @@
+package lesson_21;
+
 public class GenMan extends Employee {
 	private final int bonus = 25;
 	private final String position = "General Manager";

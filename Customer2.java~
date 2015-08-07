@@ -1,3 +1,5 @@
+package lesson_20;
+
 import java.util.Arrays;
 
 public class Customer2 {
