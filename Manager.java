@@ -1,5 +1,3 @@
-package homework.Ex_55;
-
 public class Manager extends Employee {
 	private final int bonus = 22;
 	private final String position = "    Manager    ";

@@ -1,5 +1,3 @@
-package homework.Ex_55;
-
 public class Employee {
 	private int INN;
 	private String firstName;

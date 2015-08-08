@@ -14,11 +14,6 @@
 package homework.FuncClass_Ex_xx;
 
 import java.util.*;
-import homework.Ex_55.Employee;
-import homework.Ex_55.Manager;
-import homework.Ex_55.GenMan;
-import homework.Ex_55.EngTeachers;
-import homework.Ex_55.CodeMasters;
 
 public class Ex_55 {
 
