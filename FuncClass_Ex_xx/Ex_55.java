@@ -1,3 +1,5 @@
+package FuncClass_Ex_xx;
+
 /*
 В компании "Фабрика Од Уа, ЛТД" работает 10 человек. Используя класс Employee 
 написать программу, которая создает список (массив) из 10 элементов и заполняет
@@ -11,19 +13,19 @@
  - Вычислить сотрудника с минимальным окладом. Распечатать в виде: INN	ФИО	зряплата
  - Вычислить мажора с максимальным окладом. Распечатать в виде: INN	ФИО	зряплатa
  */
-package homework.FuncClass_Ex_xx;
 
 import java.util.*;
-import homework.Ex_55.Employee;
-import homework.Ex_55.Manager;
-import homework.Ex_55.GenMan;
-import homework.Ex_55.EngTeachers;
-import homework.Ex_55.CodeMasters;
+
+import Ex_55.Employee;
+import Ex_55.GenMan;
+import Ex_55.Manager;
+import Ex_55.CodeMasters;
+import Ex_55.EngTeachers;
 
 public class Ex_55 {
 
 	public static void main(String[] args) {
-		Employee[] dataBase = new Employee();
+		Employee[] dataBase = new Employee[10];
 			dataBase[0] = new GenMan();
 			dataBase[1] = new Manager();
 			dataBase[2] = new Manager();
@@ -46,32 +48,77 @@ public class Ex_55 {
 		dataBase[8].setEmployee(8, "Andrey", "Selchuk", 19230);
 		dataBase[9].setEmployee(9, "Dmitry", "Vlaev", 20063);
 
-		System.out.print("\n1. Print the report.\n2. Monthly amount of money for issuing employees.\n3. An employee with a minimum salary.\n4. An employee with a maximum salary.\n\nChoose mode: ");
+		System.out.print( "\n1. Print the report."
+						+ "\n2. Monthly amount of money for issuing employees."
+						+ "\n3. An employee with a minimum salary."
+						+ "\n4. An employee with a maximum salary."
+						+ "\n5. Quit."
+						+ "\n"
+						+ "\nChoose mode: ");
 
 		
 		int task = 0;
+		String quit = new String();
 		Scanner in = new Scanner(System.in);
-		task = in.nextInt();
-		in.close();
-		if (task < 1 || task > 4) {
-			System.err.print("Choose mode from 1 to 2!");
-			in.close();
-			return;
-		}
-		System.out.println();
-		if(task == 1){
-			simpleReport(dataBase);
-		} else if(task == 2){
-			amount(dataBase);
-		} else if(task == 3){
-			min(dataBase);
-		} else {
-			max(dataBase);
-		}
+		do {
+			try {
+				while (in.hasNext()) {
+					task = in.nextInt();
+					if (task < 1 || task > 5) {
+						System.err.print("Choose mode from 1 to 5!");
+						in.close();
+						return;
+					}
+					System.out.println();
+					if(task == 1){
+						simpleReport(dataBase);
+						System.out.print("\n2. Monthly amount of money for issuing employees."
+								+ "\n3. An employee with a minimum salary."
+								+ "\n4. An employee with a maximum salary."
+								+ "\n5. Quit."
+								+ "\n"
+								+ "\nChoose mode: ");
+					} else if(task == 2){
+						amount(dataBase);
+						System.out.print( "\n1. Print the report."
+								+ "\n3. An employee with a minimum salary."
+								+ "\n4. An employee with a maximum salary."
+								+ "\n5. Quit."
+								+ "\n"
+								+ "\nChoose mode: ");
+					} else if(task == 3){
+						min(dataBase);
+						System.out.print( "\n1. Print the report."
+								+ "\n2. Monthly amount of money for issuing employees."
+								+ "\n4. An employee with a maximum salary."
+								+ "\n5. Quit."
+								+ "\n"
+								+ "\nChoose mode: ");
+					} else if(task == 4){
+						max(dataBase);
+						System.out.print( "\n1. Print the report."
+								+ "\n2. Monthly amount of money for issuing employees."
+								+ "\n3. An employee with a minimum salary."
+								+ "\n5. Quit."
+								+ "\n"
+								+ "\nChoose mode: ");
+					} else {
+						quit = "Quit";
+						return;
+					}
+				}
+			} catch (Exception ex) {
+				System.err.println("Input ERROR");
+			} finally {
+				in.close();
+			}
+		} while (!quit.equals("Quit"));
 	}
 	
 	public static void info(Employee dataBase){
-		System.out.println("INN: " + dataBase.getINN() + "\nName: " + dataBase.getFirstName() + "\nSurname: " + dataBase.getSecondName() + "\nPosition: " + dataBase.getPosition() + "\nTotal Salary: " + dataBase.getFullSalary(dataBase));
+		System.out.println("INN: " + dataBase.getINN() + "\nName: " + dataBase.getFirstName() + 
+				"\nSurname: " + dataBase.getSecondName() + "\nPosition: " + dataBase.getPosition()
+				+ "\nTotal Salary: " + dataBase.getFullSalary());
 	}
 	
 	public static void min(Employee[] dataBase){
@@ -112,22 +159,27 @@ public class Ex_55 {
 		for(int i = 0; i < dataBase.length; i++){
 			monthlySum += dataBase[i].getFullSalary();
 		}
-		
-		String greedIsGood = monthlySum + "";
-		int count = greedIsGood.length();
+		String s = monthlySum + "";
 		System.out.print("Total sum of salary: ");
-		boolean mark = true;
-		for (int i = 0; i < count; i ++){
-			if(greedIsGood.charAt(i) == '.'){
-				i = count -2;
-				mark = false;
-				System.out.print(".");
-			} if(i == count - 1 && mark){
-				System.out.print(".00");
+		for(int i = 0; i < s.length(); i++){
+			System.out.print(s.charAt(i));
+			if(s.charAt(i) == '.'){
+				i++;
+				if((s.length()-1) - i == 2){
+					for(int j = 0; j < 2; j++) {
+						System.out.print(s.charAt(j));
+					}
+					System.out.println("0 UAN.");
+					break;
+				} else if((s.length()-1) - i < 2){
+					System.out.println(s.charAt(i) + "0 UAN.");
+					break;
+				} else if ((s.length()-1) - i > 2) {
+					System.out.println(s.charAt(i) + "" + s.charAt(i+1) + " UAN.");
+					break;
+				}
 			}
-			System.out.print(greedIsGood.charAt(i));
 		}
-		System.out.println(" UAN.");
 	}
 	
 	public static void empListHead(){

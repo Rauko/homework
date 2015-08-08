@@ -1,10 +1,10 @@
-package homework.Ex_55;
+package Ex_55;
 
 public class CodeMasters extends Employee {
 	private final int bonus = 19;
 	private final String position = "   Programmer  ";
 
-	public int getBonus() {
+	public double getBonus() {
 		return bonus;
 	}
 	public String getPosition() {
@@ -13,10 +13,6 @@ public class CodeMasters extends Employee {
 	
 	public double totalBonus(){
 		String bonus = getSalary()*getBonus()/100 + "";
-//		String[] part = bonus.split(".");
-//		if(part[1].length() > 2){
-//			bonus = part[0] + "." + part[1].charAt(0) + part[1].charAt(1);
-//		} else  bonus = part[0] + "." + part[1];
 		Double digitBonus = Double.parseDouble(bonus);
 		return digitBonus;
 	}
@@ -88,5 +84,4 @@ public class CodeMasters extends Employee {
 		}
 		System.out.println();
 	}
-
 }

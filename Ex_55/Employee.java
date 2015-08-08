@@ -1,13 +1,18 @@
-package homework.Ex_55;
+package Ex_55;
 
 public class Employee {
 	private int INN;
 	private String firstName;
 	private String secondName;
 	private double salary;
-	private double bonus = 0;
+	final private double bonus = 0;
+	private final String position = "noob";
 	
-	public int getBonus() {
+	public String getPosition() {
+		return position;
+	}
+	
+	public double getBonus() {
 		return salary*bonus;
 	}
 
@@ -54,8 +59,8 @@ public class Employee {
 		return transformed;
 	}
 	
-	public String getFullSalary() {
-		return salary*bonus + salary;
+	public double getFullSalary() {
+		return (salary*bonus + salary);
 	}
 
 	public void setEmployee(int INN, String firstName, String secondName, double salary){
@@ -64,4 +69,8 @@ public class Employee {
 		setSecondName(secondName);
 		setSalary(salary);
 	}
+	
+	public void prLine(){}
+	
+	public Employee(){}
 }
