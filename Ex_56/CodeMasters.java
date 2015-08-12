@@ -1,4 +1,4 @@
-package Ex_55;
+package Ex_56;
 
 public class CodeMasters extends Employee {
 	private final int bonus = 19;
