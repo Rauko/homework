@@ -1,6 +1,7 @@
 package Ex_55_coll;
 
 public class Code extends Employee {
+	
 	private final int bonus = 19;
 	private final String position = "   Programmer  ";
 
