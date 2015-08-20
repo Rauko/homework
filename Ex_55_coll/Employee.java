@@ -1,6 +1,7 @@
 package Ex_55_coll;
 
 public class Employee {
+
 	private int INN;
 	private String firstName;
 	private String secondName;
